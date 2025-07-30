@@ -1,6 +1,6 @@
 "use server"
 
-import { registerSchema, loginSchema } from "@/src/lib/validations/auth"
+import { registerSchema, loginSchema } from "@/lib/validations/auth"
 import { redirect } from "next/navigation"
 
 export type AuthState = {

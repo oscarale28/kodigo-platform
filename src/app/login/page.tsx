@@ -2,14 +2,14 @@
 
 import { useActionState } from "react"
 import Link from "next/link"
-import { loginAction, quickLoginAction, type AuthState } from "@/src/lib/actions/auth"
-import { Input } from "@/src/components/ui/input"
-import { Label } from "@/src/components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { Alert, AlertDescription } from "@/src/components/ui/alert"
-import { Navbar } from "@/src/components/navbar"
+import { loginAction, quickLoginAction, type AuthState } from "@/lib/actions/auth"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Navbar } from "@/components/navbar"
 import { LogIn, ArrowLeft, Zap } from "lucide-react"
-import { Button } from "@/src/components/ui/button"
+import { Button } from "@/components/ui/button"
 
 const initialState: AuthState = {
   errors: {},

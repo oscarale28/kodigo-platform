@@ -2,13 +2,13 @@
 
 import { useActionState } from "react"
 import Link from "next/link"
-import { registerAction, type AuthState } from "@/src/lib/actions/auth"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
-import { Label } from "@/src/components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { Alert, AlertDescription } from "@/src/components/ui/alert"
-import { Navbar } from "@/src/components/navbar"
+import { registerAction, type AuthState } from "@/lib/actions/auth"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Navbar } from "@/components/navbar"
 import { UserPlus, ArrowLeft, Info } from "lucide-react"
 
 const initialState: AuthState = {
