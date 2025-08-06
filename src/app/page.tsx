@@ -1,19 +1,16 @@
+import { ArrowRight, CheckCircle, Clock, Code, Trophy, Users } from "lucide-react"
 import Link from "next/link"
 import { Button } from "../components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import { Navbar } from "../components/navbar"
-import { Code, Users, Trophy, Clock, ArrowRight, CheckCircle } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <Navbar />
-
+    <>
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto py-20">
         <div className="text-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
               Transforma tu futuro con
               <br />
               <span className="text-primary">Kodigo Academy</span>
@@ -25,15 +22,9 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/register">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Comenzar ahora
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
             <Link href="/login">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
-                Ya tengo cuenta
+              <Button size="lg" className="text-lg px-8 py-6">
+                Ingresar a la plataforma
               </Button>
             </Link>
           </div>
@@ -41,14 +32,14 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto py-20">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">¿Por qué elegir Kodigo?</h2>
           <p className="text-xl text-muted-foreground">La mejor experiencia de aprendizaje en programación</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <Code className="h-12 w-12 text-primary mx-auto mb-4" />
               <CardTitle>Tecnologías Actuales</CardTitle>
@@ -60,7 +51,7 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <Users className="h-12 w-12 text-primary mx-auto mb-4" />
               <CardTitle>Mentores Expertos</CardTitle>
@@ -72,7 +63,7 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <Trophy className="h-12 w-12 text-primary mx-auto mb-4" />
               <CardTitle>Proyectos Reales</CardTitle>
@@ -84,7 +75,7 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-xl transition-shadow">
             <CardHeader>
               <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
               <CardTitle>Horarios Flexibles</CardTitle>
@@ -97,118 +88,116 @@ export default function HomePage() {
       </section>
 
       {/* Bootcamps Preview */}
-      <section className="bg-muted/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">Nuestros Bootcamps</h2>
-            <p className="text-xl text-muted-foreground">
-              Programas intensivos diseñados para llevarte al siguiente nivel
-            </p>
-          </div>
+      <section className="container mx-auto py-20">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold">Nuestros Bootcamps</h2>
+          <p className="text-xl text-muted-foreground">
+            Programas intensivos diseñados para llevarte al siguiente nivel
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Code className="h-5 w-5 text-primary" />
-                  Full Stack JavaScript
-                </CardTitle>
-                <CardDescription>16 semanas • Nivel intermedio</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Domina React, Node.js, Express y MongoDB para convertirte en un desarrollador full stack.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    React & Next.js
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Node.js & Express
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    MongoDB & PostgreSQL
-                  </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Code className="h-5 w-5 text-primary" />
+                Full Stack JavaScript
+              </CardTitle>
+              <CardDescription>16 semanas • Nivel intermedio</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                Domina React, Node.js, Express y MongoDB para convertirte en un desarrollador full stack.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  React & Next.js
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Code className="h-5 w-5 text-primary" />
-                  Python & Data Science
-                </CardTitle>
-                <CardDescription>12 semanas • Nivel principiante</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Aprende Python desde cero y especialízate en análisis de datos y machine learning.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Python fundamentals
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Pandas & NumPy
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Machine Learning
-                  </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  Node.js & Express
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Code className="h-5 w-5 text-primary" />
-                  Mobile Development
-                </CardTitle>
-                <CardDescription>14 semanas • Nivel intermedio</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Desarrolla aplicaciones móviles nativas con React Native y Flutter.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    React Native
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    Flutter & Dart
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    App Store deployment
-                  </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  MongoDB & PostgreSQL
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
 
-          <div className="text-center mt-12">
-            <Link href="/register">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Ver todos los bootcamps
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+          <Card className="hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Code className="h-5 w-5 text-primary" />
+                Python & Data Science
+              </CardTitle>
+              <CardDescription>12 semanas • Nivel principiante</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                Aprende Python desde cero y especialízate en análisis de datos y machine learning.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  Python fundamentals
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  Pandas & NumPy
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  Machine Learning
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Code className="h-5 w-5 text-primary" />
+                Mobile Development
+              </CardTitle>
+              <CardDescription>14 semanas • Nivel intermedio</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                Desarrolla aplicaciones móviles nativas con React Native y Flutter.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  React Native
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  Flutter & Dart
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  App Store deployment
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="/dashboard">
+            <Button size="lg" className="text-lg px-8 py-6">
+              Ver todos los bootcamps
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
+      {/* <section className="container mx-auto px-4 py-20">
+        <Card className="bg-gradient-to-r from-purple-600 to-violet-600 text-white">
           <CardContent className="text-center py-16 space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">¿Listo para cambiar tu carrera?</h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -232,7 +221,7 @@ export default function HomePage() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t bg-muted/50">
@@ -242,6 +231,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   )
 }
