@@ -54,7 +54,7 @@ El proyecto consiste en una plataforma de cursos online desarrollada con **Next.
 
 ## 📊 Esquema de Base de Datos
 
-### Tabla `courses`
+### Tabla `bootcamps`
 
 ```sql
 - id (UUID, Primary Key)
@@ -64,8 +64,11 @@ El proyecto consiste en una plataforma de cursos online desarrollada con **Next.
 - duration (TEXT) - ej: "4 semanas", "20 horas"
 - level (TEXT) - "Principiante", "Intermedio", "Avanzado"
 - is_active (BOOLEAN, DEFAULT true)
+- start_date (DATE)
+- end_date (DATE)
 - created_at (TIMESTAMP)
 - updated_at (TIMESTAMP)
+- technologies (TEXT[])
 ```
 
 ### Tabla `enrollments`
@@ -229,11 +232,14 @@ El archivo `.vscode/mcp.json` contiene la configuración:
 │   │   └── page.tsx            # Landing page
 │   ├── components/             # Componentes reutilizables
 │   │   └── ui/                 # Componentes de shadcn/ui
+│   │   └──auth/                # para los registros de autenticacion supabase
+│   │   └──Landing/             # arhicvement, bootcamps, footer, hero, section-title
 │   ├── hooks/                  # Custom hooks
 │   ├── lib/                    # Utilidades y configuraciones
 │   │   ├── actions/            # Server actions
 │   │   ├── supabase/           # Configuración Supabase
 │   │   └── validations/        # Esquemas Zod
+│   │   └──techLogos.ts         # para guardar logos de los bootcamps
 ├── components.json             # Configuración shadcn/ui
 └── package.json
 ```
