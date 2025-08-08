@@ -9,7 +9,7 @@ export default function HomePage() {
       <LandingHero />
       <LandingAchievements />
       <LandingBootcamps />
-      <Footer />
+    
     </div>
   )
 }

@@ -94,14 +94,14 @@ const LandingBootcamps = async () => {
       <AnimatedSection animation="scaleIn" duration={600} delay={600}>
         <div className="text-center">
           <Link href="/dashboard">
-            <Button size="lg" className="px-8 py-6 text-lg font-semibold">
-              Ver todos los bootcamps
+            <Button size="lg" className="mb-6 px-8 py-6 text-lg font-semibold">
+              Ver todos y registrarme
               <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </Link>
         </div>
       </AnimatedSection>
-    </section>
+          </section>
   )
 }
 
