@@ -48,7 +48,15 @@ export const signInWithGitHub = async (): Promise<AuthState> => {
     }
   }
 
-  redirect(data.url)
+  if (data?.url) {
+    redirect(data.url)
+  } else {
+    return {
+      errors: {
+        _form: ["No se pudo obtener la URL de redirección de GitHub"],
+      },
+    }
+  }
 }
 
 

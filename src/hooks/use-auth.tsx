@@ -15,13 +15,20 @@ export function useAuth() {
   const [loading, setLoading] = useState(true)
   const supabase = createClient() // Browser client
 
+  // Helper function to get user's name
+  function getUserName(session: any) {
+    return session.user.user_metadata.full_name
+      ? session.user.user_metadata.full_name
+      : session.user.email;
+  }
+
   useEffect(() => {
     // Obtener sesión inicial
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session ? {
         id: session.user.id,
         email: session.user.email,
-        name: session.user.user_metadata.full_name ? session.user.user_metadata.full_name : session.user.email,
+        name: getUserName(session),
       } : null)
       setLoading(false)
     })
@@ -32,7 +39,7 @@ export function useAuth() {
         setUser(session ? {
           id: session.user.id,
           email: session.user.email,
-          name: session.user.user_metadata.full_name ? session.user.user_metadata.full_name : session.user.email,
+          name: getUserName(session),
         } : null)
         setLoading(false)
       }

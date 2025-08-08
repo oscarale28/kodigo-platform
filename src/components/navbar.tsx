@@ -18,7 +18,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-between p-4 bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60 border-b border-border/40">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex w-[min(100%-2rem,1200px)] items-center justify-between rounded-lg bg-transparent px-4 py-2 shadow-sm backdrop-blur-xl supports-[backdrop-filter]:bg-background/30">
       <Link href="/" className="flex items-center space-x-2">
         <Code className="h-6 w-6 text-primary" />
         <span className="text-xl font-bold">Kodigo Academy</span>
@@ -27,7 +27,7 @@ export function Navbar() {
       <div className="flex items-center space-x-2">
 
         {user ? (
-          <Button variant="outline" onClick={handleSignOut}>
+          <Button variant="secondary" onClick={handleSignOut}>
             Cerrar sesión
           </Button>
         ) : (

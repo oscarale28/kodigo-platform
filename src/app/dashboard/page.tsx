@@ -72,7 +72,7 @@ export default async function DashboardPage() {
   const bootcamps = await getBootcamps()
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pt-28!">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl mb-2 font-bold">¡Hola, {user?.user_metadata?.name}! 👋</h1>
